@@ -1,0 +1,25 @@
+ 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image recognition</title>
+</head>
+<body>
+    <strong>
+        <p style="font-size:25px">This is a demo of image recognition task using Django and tfserving.</p>
+    </strong>
+        <p style="font-size:15px">Type your image URL in the input box below,and cilck the predict button,it will gives a prediction result.</p>
+    <form action="/search" method="get">
+        <input type="text" name="info" placeholder="Type image url here" size="80" >
+        <input type="submit" value="predict">
+    </form>
+    <b>The image of your input image URL is:</b><br />
+    <div style="widt:800px; float:none" align="left">
+        <img src="{{image_url}}"  alt="img" width="300px" border=1 onerror="this.style.display='none' />
+    </div>
+    <strong>    
+       <p style="font-size:20px"><br />predict result: <span style="font-size:20px;color:red">{{ predict_name }}</span></p>
+    </strong>
+</body>
+</html>
+  
